@@ -1,0 +1,213 @@
+fileFormatVersion: 2
+guid: 2e008a58074180c449a7ec1885d5c438
+timeCreated: 1461425044
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Fish_Head
+    100002: Fish_Tail
+    100004: Gear
+    100006: Left_Eye
+    100008: Left_Fin
+    100010: //RootNode
+    100012: Mid_Body
+    100014: Propeller
+    100016: Right_Eye
+    100018: Right_Fin
+    400000: Fish_Head
+    400002: Fish_Tail
+    400004: Gear
+    400006: Left_Eye
+    400008: Left_Fin
+    400010: //RootNode
+    400012: Mid_Body
+    400014: Propeller
+    400016: Right_Eye
+    400018: Right_Fin
+    2300000: Fish_Head
+    2300002: Fish_Tail
+    2300004: Gear
+    2300006: Left_Eye
+    2300008: Left_Fin
+    2300010: Mid_Body
+    2300012: Propeller
+    2300014: Right_Eye
+    2300016: Right_Fin
+    3300000: Fish_Head
+    3300002: Fish_Tail
+    3300004: Gear
+    3300006: Left_Eye
+    3300008: Left_Fin
+    3300010: Mid_Body
+    3300012: Propeller
+    3300014: Right_Eye
+    3300016: Right_Fin
+    4300000: Fish_Head
+    4300002: Right_Eye
+    4300004: Left_Eye
+    4300006: Propeller
+    4300008: Right_Fin
+    4300010: Left_Fin
+    4300012: Gear
+    4300014: Mid_Body
+    4300016: Fish_Tail
+    7400000: Moving
+    7400002: Idle
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: <Root Transform>
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Moving
+      takeName: Take 001
+      firstFrame: 20
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Fish_Head
+        weight: 1
+      - path: Fish_Head/Gear
+        weight: 1
+      - path: Fish_Head/Left_Eye
+        weight: 1
+      - path: Fish_Head/Left_Fin
+        weight: 1
+      - path: Fish_Head/Propeller
+        weight: 1
+      - path: Fish_Head/Right_Eye
+        weight: 1
+      - path: Fish_Head/Right_Fin
+        weight: 1
+      - path: Fish_Tail
+        weight: 1
+      - path: Mid_Body
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Idle
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 20
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Fish_Head
+        weight: 1
+      - path: Fish_Head/Gear
+        weight: 1
+      - path: Fish_Head/Left_Eye
+        weight: 1
+      - path: Fish_Head/Left_Fin
+        weight: 1
+      - path: Fish_Head/Propeller
+        weight: 1
+      - path: Fish_Head/Right_Eye
+        weight: 1
+      - path: Fish_Head/Right_Fin
+        weight: 1
+      - path: Fish_Tail
+        weight: 1
+      - path: Mid_Body
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 40
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

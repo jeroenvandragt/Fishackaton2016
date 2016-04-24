@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class TESTMovement : MonoBehaviour
@@ -24,11 +24,36 @@ public class TESTMovement : MonoBehaviour
     private float maxMovementSpeed;
     [SerializeField]
     private float minMovementSpeed;
+    private float speedIncrement = 1.1f;
+    private float speedFallOf = 0.9f;
+    public bool currentlyMoving()
+    {
+        return movementSpeed > minMovementSpeed;
+    }
+    public void accelerate()
+    {
+        myAnimator.SetBool( "isMoving" , true );
+        if (!currentlyMoving())
+        {
+            movementSpeed = minMovementSpeed;
+        }
+        else if ((movementSpeed *= speedIncrement) < maxMovementSpeed)
+        {
+            movementSpeed *= speedIncrement;
+        }
+    }
+    public void decelerate()
+    {
+        myAnimator.SetBool( "isMoving" , false );
+        rb.velocity *= speedFallOf;
+        movementSpeed *= speedFallOf;
 
-    public bool currentlyMoving;
-
+        if (Mathf.Approximately( movementSpeed, 0 ))
+        {
+            movementSpeed = 0;
+        }
+    }
     public float distancePerFish;
-
     public void Start ( )
     {
         myAnimator = GetComponent<Animator>();
@@ -54,47 +79,13 @@ public class TESTMovement : MonoBehaviour
             movementSpeed = maxMovementSpeed;
         }
 
-        if (currentlyMoving)
+        while (Input.GetKey( KeyCode.W ))
         {
-            movementSpeed *= 1.1f;
-            myAnimator.SetBool( "isMoving" , true );
+            accelerate();
         }
-        else if (!currentlyMoving)
+        if (currentlyMoving() & !Input.GetKey( KeyCode.W ))
         {
-            myAnimator.SetBool( "isMoving" , false );
-            rb.velocity *= 0.9f;
-            movementSpeed *= 0.9f;
-            
-            if (Mathf.Approximately( movementSpeed, 0 ))
-            {
-                movementSpeed = 0;
-            }
-        }
-
-        if (canReceiveInput)
-        {
-            if (Input.GetKeyDown( KeyCode.W ))
-            {
-                currentlyMoving = true;
-            }
-        }
-        if(Input.GetKeyUp(KeyCode.W))
-        {
-            currentlyMoving = false;
-            Debug.Log("Currently moving should be false: " + currentlyMoving);
-        }
-
-        if (canReceiveInput)
-        {
-            if (Input.GetKey( KeyCode.W ))
-            {
-                currentlyMoving = true;
-            }
-        }
-
-        if(currentlyMoving)
-        {
-
+            decelerate();
         }
 
         // Read the mouse input axis
@@ -106,7 +97,7 @@ public class TESTMovement : MonoBehaviour
 
         transform.localRotation = originalRotation * xQuaternion * yQuaternion;
 
-        if (currentlyMoving)
+        if (currentlyMoving())
         {
             transform.position += transform.forward + new Vector3(0,0,movementSpeed);
             //Debug.Log( transform.forward + new Vector3( 0, 0, movementSpeed ));
